@@ -105,13 +105,14 @@ add_action( 'widgets_init', 'davidparsonstheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function davidparsonstheme_scripts() {
+	// CSS.
 	wp_enqueue_style( 'davidparsonstheme-font', 'https://fonts.googleapis.com/css?family=Droid+Serif' );
+	wp_enqueue_style( 'davidparsonstheme-style', get_template_directory_uri() . '/dist/style.css', array(), '20151216' );
 
-	wp_enqueue_style( 'davidparsonstheme-style', get_template_directory_uri() . '/dist/style.css' );
+	// Global JS: Includes navigation, skip-link-focus-fix, and davidparsons.
+	wp_enqueue_script( 'davidparsonstheme-js', get_template_directory_uri() . '/dist/scripts.js', array(), '20151216', true );
 
-	// Includes navigation, skip-link-focus-fix, and davidparsons
-	wp_enqueue_script( 'davidparsonstheme-js', get_template_directory_uri() . '/dist/scripts.js', array(), '20151215', true );
-
+	// JS for comments if needed.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
