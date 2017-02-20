@@ -46,7 +46,7 @@ a:hover {
 		margin-bottom: 0;
 	}
 }
-.entry-title {
+.page .entry-title {
 	display: none;
 }
 
@@ -119,9 +119,15 @@ a:hover {
 
 // Blog
 .blog {
-	.site-content {
-		margin-top: 1.5em;
+	.entry-title {
+		margin-bottom: 0;
 	}
+	.entry-content {
+		display: none;
+	}
+}
+.post-navigation {
+	display: none;
 }
 
 // Other

@@ -657,7 +657,7 @@ a:hover {
   .hentry {
     margin-bottom: 0; } }
 
-.entry-title {
+.page .entry-title {
   display: none; }
 
 .site-header {
@@ -715,8 +715,14 @@ a:hover {
     .home .entry-content {
       text-align: left; } }
 
-.blog .site-content {
-  margin-top: 1.5em; }
+.blog .entry-title {
+  margin-bottom: 0; }
+
+.blog .entry-content {
+  display: none; }
+
+.post-navigation {
+  display: none; }
 
 .edit-link {
   display: none; }
