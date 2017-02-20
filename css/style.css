@@ -715,10 +715,12 @@ a:hover {
     .home .entry-content {
       text-align: left; } }
 
-.blog .entry-title {
+.blog .entry-title,
+.archive .entry-title {
   margin-bottom: 0; }
 
-.blog .entry-content {
+.blog .entry-content,
+.archive .entry-content {
   display: none; }
 
 .post-navigation {
