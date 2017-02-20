@@ -1,0 +1,127 @@
+// Media Queries
+$mobile-width: 600px;
+@mixin mobile {
+	@media (max-width: #{$mobile-width}) {
+		@content;
+	}
+}
+
+// Overall Layout
+body {
+	background-color: #fdfdfd;
+}
+.site {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #009351;
+}
+.site-content {
+	font-size: 110%;
+	line-height: 1.7em;
+	@include mobile {
+		line-height: inherit;
+	}
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	*:first-child {
+		@include mobile {
+			margin-top: 0;
+		}
+	}
+}
+.hentry {
+	@include mobile {
+		margin-bottom: 0;
+	}
+}
+.entry-title {
+	display: none;
+}
+
+// Header
+.site-header {
+	padding: 10px 0;
+	border-bottom: 1px dotted #454545;
+}
+.site-title {
+	margin: 0;
+	font-size: 20px;
+	list-style: inherit;
+	@include mobile {
+		text-align: center;
+	}
+}
+.site-branding {
+	float: left;
+	@include mobile {
+		float: none;
+	}
+}
+.main-navigation {
+	float: right;
+	width: auto;
+	clear: none;
+	font-size: 20px;
+	list-style: inherit;
+	@include mobile {
+		float: none;
+		text-align: center;
+		font-size: inherit;
+	}
+	li {
+		margin-left: 15px;
+		@include mobile {
+			display: inline;
+			float: none;
+			margin-left: 10px;
+		}
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+	a {
+		@include mobile {
+			display: inline-block;
+		}
+	}
+}
+
+// Footer
+.site-footer {
+	padding: 10px 0;
+	border-top: 1px dotted #454545;
+	font-style: italic;
+	font-size: 75%;
+	text-align: center;
+}
+
+// Homepage
+.home {
+	.entry-content {
+		text-align: center;
+		@include mobile {
+			text-align: left;
+		}
+	}
+}
+
+// Blog
+.blog {
+	.site-content {
+		margin-top: 1.5em;
+	}
+}
+
+// Other
+.edit-link {
+	display: none;
+}
